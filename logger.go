@@ -15,7 +15,7 @@ const (
 
 type logger uint8
 
-func (l logger) Spew(v ...interface{}) {
+func (l logger) Dump(v ...interface{}) {
 	if level(l) >= Level {
 		spew.Dump(v...)
 	}
